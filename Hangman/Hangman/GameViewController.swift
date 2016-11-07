@@ -73,7 +73,7 @@ class GameViewController: UIViewController, UITextFieldDelegate{
     
     @IBAction func guessButton(_ sender: AnyObject) {
         if((textField) != nil){
-            let guess = textField.text
+            let guess = textField.text?.uppercased()
             //if letter is in the phrase - update blank, go through blank wordLabel
             print(phrase.characters.count)
             for i in 0...(phrase.characters.count - 1){
